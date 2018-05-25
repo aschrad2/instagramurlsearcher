@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InstagramUrlsService } from '../services/instagram-urls.service';
 import { InstagramURL } from '../models/instagramURL';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-admin',
