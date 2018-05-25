@@ -12,7 +12,7 @@ import {PageEvent} from '@angular/material';
 export class AdminComponent implements OnInit {
 
   // MatPaginator Output
-  public pageEvent: PageEvent;
+  public pageEvent: any;
   public instagramURLs: InstagramURL[];
   public dataSource: any;
   public displayedColumns = ['url', 'linkedURLs', 'actions'];
