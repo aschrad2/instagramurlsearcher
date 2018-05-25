@@ -1,0 +1,22 @@
+<span class="router-link no-select" routerLink="admin">Admin Panel</span>
+
+<div id="search-form-container">
+  <h1 class="search-form-container__heading">Search url</h1>
+  <form class="search-form">
+    <mat-form-field class="search-form__full-width">
+      <button mat-button (click)="getInstagramUrl(searchInput.value)" style="position: absolute; right: 0; bottom: 5px;" color="primary">Search</button>
+      <input matInput #searchInput (keydown.enter)="getInstagramUrl(searchInput.value)" placeholder="Instagram URL" [formControl]="urlFormControl">
+      <mat-error *ngIf="!urlFormControl.hasError('required')">
+        Please enter a valid URL
+      </mat-error>
+      <mat-error *ngIf="urlFormControl.hasError('required')">
+        url was not <strong>found</strong>
+      </mat-error>
+    </mat-form-field>
+    <ul class="search-form__ul" *ngIf="linkedURLs">
+      <li class="search-form__li" *ngFor="let url of linkedURLs">
+        <span class="search-form__link">{{url}}</span>
+      </li>
+    </ul>
+  </form>
+</div>

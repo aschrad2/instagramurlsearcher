@@ -1,0 +1,31 @@
+.search-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.search-form__full-width {
+  width: 100%;
+}
+
+.search-form-container__heading {
+  text-align: center;
+}
+
+.search-form__ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-form__li {
+  margin-top: 1rem;
+}
+
+.search-form__link {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
