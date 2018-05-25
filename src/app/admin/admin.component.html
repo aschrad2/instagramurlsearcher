@@ -3,7 +3,7 @@
 
 <div id="data-table-container">
   <button mat-button color="primary" routerLink="create">Create URL</button>
-    <mat-table [dataSource]="instagramURLs">
+    <mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="url">
         <mat-header-cell *matHeaderCellDef> URL </mat-header-cell>
         <mat-cell *matCellDef="let instagramURL"> {{instagramURL.id}} </mat-cell>
@@ -22,4 +22,7 @@
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
-  </div>
+    <mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" [showFirstLastButtons]="true" [length]="length"
+    [pageIndex]="currentPage" (page)="pageEvent = handlePage($event)">
+  </mat-paginator>
+</div>
