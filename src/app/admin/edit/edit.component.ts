@@ -25,7 +25,7 @@ export class EditComponent implements OnInit {
     }
   }
 
-  public updateInstagramURL(id: string, linkedURLs: string[]): void {
+  public updateInstagramURL(): void {
     this.instagramUrlsService.updateInstagramURL(this.instagramURL).subscribe();
   }
 
