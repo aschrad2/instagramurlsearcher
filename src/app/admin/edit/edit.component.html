@@ -1,1 +1,22 @@
 <span class="router-link no-select" routerLink="/admin">Back To Admin Page</span>
+<h1 class="component-heading">Admin Panel Edit Form</h1>
+
+<div class="input-form-create-edit-container">
+  <mat-form-field>
+    <input matInput placeholder="URL" [(ngModel)]="instagramURL.id" readonly>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input #linkedURL matInput placeholder="Linked Url" (keydown.enter)="addLinkedURL(linkedURL.value)">
+    <button mat-button color="primary" (click)="addLinkedURL(linkedURL.value)" style="position: absolute; right: 0; bottom: 5px;">Add Linked URL</button>
+  </mat-form-field>
+  <button mat-button color="primary" (click)="updateInstagramURL()" routerLink="/admin">Update URL</button>
+
+  <mat-list>
+      <h2 style="padding: 0" mat-subheader>Linked URLs</h2>
+      <mat-list-item *ngFor="let url of instagramURL.linkedURLs">
+        <h4 mat-line>{{url}}</h4>
+        <span class="input-form__remove" (click)="removeLinkedURL(url)">remove</span>
+      </mat-list-item>
+  </mat-list>
+</div>

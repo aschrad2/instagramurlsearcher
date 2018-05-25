@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatInputModule, MatTableModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatTableModule, MatButtonModule, MatListModule } from '@angular/material';
 
 // Temp solution until connected to database
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -40,7 +40,8 @@ import { EditComponent } from './admin/edit/edit.component';
     NoopAnimationsModule,
     MatInputModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
   providers: [ InstagramUrlsService ],
   bootstrap: [AppComponent]
